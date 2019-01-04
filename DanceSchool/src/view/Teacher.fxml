@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.TeacherController">
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <SplitPane dividerPositions="0.22100313479623823" layoutY="-1.0" prefHeight="400.0" prefWidth="640.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="187.0">
+                <Button fx:id="groups_btn" layoutX="-6.0" layoutY="120.0" mnemonicParsing="false"
+                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Moje grupy"/>
+                <Button fx:id="calendar_btn" layoutX="-5.0" layoutY="212.0" mnemonicParsing="false"
+                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Harmonogram"/>
+                <Button fx:id="home_btn" layoutX="40.0" layoutY="38.0" mnemonicParsing="false"
+                        onAction="#buttonHandler" prefHeight="49.0" prefWidth="52.0" text="Button"/>
+                <Button fx:id="settings_btn" layoutX="-5.0" layoutY="257.0" mnemonicParsing="false"
+                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Ustawienia"/>
+                <Button fx:id="grades_btn" layoutX="-2.0" layoutY="166.0" mnemonicParsing="false"
+                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Dziennik"/>
+                <Button fx:id="logout_btn" layoutX="33.0" layoutY="353.0" mnemonicParsing="false"
+                        onAction="#logoutButtonPressed" text="Wyloguj"/>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <Pane fx:id="homePane" prefHeight="400.0" prefWidth="493.0"
+                      style="-fx-background-color: #1fdd55;"/>
+                <Pane fx:id="groupsPane" prefHeight="400.0" prefWidth="493.0"
+                      style="-fx-background-color: #db8925;"/>
+                <Pane fx:id="gradesPane" prefHeight="400.0" prefWidth="493.0"
+                      style="-fx-background-color: #073fea;"/>
+                <Pane fx:id="calendarPane" prefHeight="400.0" prefWidth="493.0"
+                      style="-fx-background-color: #e00f6d;"/>
+                <Pane fx:id="settingsPane" prefHeight="400.0" prefWidth="493.0"
+                      style="-fx-background-color: #2bdbb8;"/>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</VBox>
