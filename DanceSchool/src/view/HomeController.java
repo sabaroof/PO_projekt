@@ -24,7 +24,6 @@ public class HomeController implements Initializable {
         Parent user = FXMLLoader.load(getClass().getResource("User.fxml"));
         Scene userScene = new Scene(user);
 
-        //This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         window.setScene(userScene);
@@ -36,7 +35,6 @@ public class HomeController implements Initializable {
         Parent teacher = FXMLLoader.load(getClass().getResource("Teacher.fxml"));
         Scene teacherScene = new Scene(teacher);
 
-        //This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         window.setScene(teacherScene);
@@ -46,7 +44,6 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 /*
     @FXML
