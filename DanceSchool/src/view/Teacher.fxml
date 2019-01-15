@@ -1,40 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="view.TeacherController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TeacherController">
     <AnchorPane VBox.vgrow="ALWAYS">
         <SplitPane dividerPositions="0.22100313479623823" layoutY="-1.0" prefHeight="400.0" prefWidth="640.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="187.0">
-                <Button fx:id="groups_btn" layoutX="-6.0" layoutY="120.0" mnemonicParsing="false"
-                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Moje grupy"/>
-                <Button fx:id="calendar_btn" layoutX="-5.0" layoutY="212.0" mnemonicParsing="false"
-                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Harmonogram"/>
-                <Button fx:id="home_btn" layoutX="40.0" layoutY="38.0" mnemonicParsing="false"
-                        onAction="#buttonHandler" prefHeight="49.0" prefWidth="52.0" text="Button"/>
-                <Button fx:id="settings_btn" layoutX="-5.0" layoutY="257.0" mnemonicParsing="false"
-                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Ustawienia"/>
-                <Button fx:id="grades_btn" layoutX="-2.0" layoutY="166.0" mnemonicParsing="false"
-                        onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Dziennik"/>
-                <Button fx:id="logout_btn" layoutX="33.0" layoutY="353.0" mnemonicParsing="false"
-                        onAction="#logoutButtonPressed" text="Wyloguj"/>
+                <Button fx:id="groups_btn" layoutX="-6.0" layoutY="120.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Moje grupy" />
+                <Button fx:id="calendar_btn" layoutX="-5.0" layoutY="212.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Harmonogram" />
+                <Button fx:id="home_btn" layoutX="40.0" layoutY="38.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="49.0" prefWidth="52.0" text="Button" />
+                <Button fx:id="settings_btn" layoutX="-5.0" layoutY="257.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Ustawienia" />
+                <Button fx:id="grades_btn" layoutX="-2.0" layoutY="166.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="31.0" prefWidth="144.0" text="Dziennik" />
+                <Button fx:id="logout_btn" layoutX="33.0" layoutY="353.0" mnemonicParsing="false" onAction="#logoutButtonPressed" text="Wyloguj" />
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                <Pane fx:id="homePane" prefHeight="400.0" prefWidth="493.0"
-                      style="-fx-background-color: #1fdd55;"/>
-                <Pane fx:id="groupsPane" prefHeight="400.0" prefWidth="493.0"
-                      style="-fx-background-color: #db8925;"/>
-                <Pane fx:id="gradesPane" prefHeight="400.0" prefWidth="493.0"
-                      style="-fx-background-color: #073fea;"/>
-                <Pane fx:id="calendarPane" prefHeight="400.0" prefWidth="493.0"
-                      style="-fx-background-color: #e00f6d;"/>
-                <Pane fx:id="settingsPane" prefHeight="400.0" prefWidth="493.0"
-                      style="-fx-background-color: #2bdbb8;"/>
+                <Pane fx:id="gradesPane" prefHeight="400.0" prefWidth="493.0" style="-fx-background-color: #073fea;">
+               <children>
+                  <TableView layoutX="21.0" layoutY="44.0" prefHeight="267.0" prefWidth="452.0">
+                    <columns>
+                      <TableColumn minWidth="0.0" prefWidth="146.0" text="Imię" />
+                      <TableColumn prefWidth="155.0" text="Nazwisko" />
+                        <TableColumn prefWidth="145.0" text="Ocena" />
+                    </columns>
+                  </TableView>
+                  <ComboBox fx:id="classesComboBox" layoutX="172.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextField fx:id="studentNameField" layoutX="23.0" layoutY="328.0" prefHeight="25.0" prefWidth="124.0" />
+                  <TextField fx:id="studentSurnameField" layoutX="161.0" layoutY="328.0" prefHeight="25.0" prefWidth="130.0" />
+                  <TextField fx:id="gradeField" layoutX="304.0" layoutY="328.0" prefHeight="25.0" prefWidth="39.0" />
+                  <Button fx:id="addGradeBtn" layoutX="380.0" layoutY="328.0" mnemonicParsing="false" text="Dodaj" />
+               </children></Pane>
+                <Pane fx:id="settingsPane" prefHeight="400.0" prefWidth="493.0" style="-fx-background-color: #2bdbb8;">
+               <children>
+                  <Label alignment="CENTER" layoutX="50.0" layoutY="29.0" prefHeight="31.0" prefWidth="124.0" text="Dane" textAlignment="CENTER" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="71.0" prefHeight="31.0" prefWidth="52.0" text="Imię" />
+                  <Label alignment="CENTER" layoutY="112.0" prefHeight="31.0" prefWidth="97.0" text="Nazwisko" />
+                  <TextField fx:id="teacherNameField" layoutX="112.0" layoutY="74.0" />
+                  <TextField fx:id="teacherSurnameField" layoutX="112.0" layoutY="115.0" />
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="151.0" prefHeight="31.0" prefWidth="97.0" text="Nr telefonu" />
+                  <TextField fx:id="nrTelField" layoutX="112.0" layoutY="154.0" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="192.0" prefHeight="31.0" prefWidth="76.0" text="Licencja" />
+                  <ComboBox fx:id="licenseTeacherBox" layoutX="111.0" layoutY="195.0" prefWidth="150.0" />
+                  <Button fx:id="settingConfirmBtn" layoutX="315.0" layoutY="296.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" text="Zatwierdź" />
+               </children></Pane>
+                <Pane fx:id="calendarPane" prefHeight="400.0" prefWidth="493.0" style="-fx-background-color: #e00f6d;">
+               <children>
+                  <TableView fx:id="calendarTable" layoutX="24.0" layoutY="39.0" prefHeight="322.0" prefWidth="440.0">
+                    <columns>
+                      <TableColumn fx:id="zajeciaColumn" prefWidth="141.0" text="Zajęcia" />
+                      <TableColumn fx:id="dataColumn" prefWidth="180.0" text="Data" />
+                        <TableColumn fx:id="liczbaUczniowColumn" prefWidth="117.0" text="Liczba uczniów" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+                <Pane fx:id="homePane" prefHeight="400.0" prefWidth="493.0" style="-fx-background-color: #1fdd55;">
+               <children>
+                  <Label fx:id="welcomeLabel" layoutX="53.0" layoutY="74.0" prefHeight="76.0" prefWidth="384.0" />
+                  <Label fx:id="nextClassLabel" layoutX="28.0" layoutY="206.0" prefHeight="99.0" prefWidth="433.0" />
+               </children></Pane>
+                <Pane fx:id="groupsPane" prefHeight="400.0" prefWidth="493.0" style="-fx-background-color: #db8925;">
+               <children>
+                  <ComboBox fx:id="groupsComboBox" layoutX="172.0" layoutY="31.0" prefWidth="150.0" />
+                  <ListView fx:id="groupsListView" layoutX="136.0" layoutY="65.0" prefHeight="335.0" prefWidth="222.0" />
+                  <Button fx:id="usunButton" layoutX="376.0" layoutY="208.0" mnemonicParsing="false" text="Usuń" />
+               </children></Pane>
             </AnchorPane>
         </SplitPane>
     </AnchorPane>

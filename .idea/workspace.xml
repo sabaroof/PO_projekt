@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ab43c34-016a-4e06-932e-5f83a1da47c4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DanceSchool/src/model/LoggedUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DanceSchool/src/model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/model/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DanceSchool/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DanceSchool/src/view/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/view/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DanceSchool/src/view/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/view/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DanceSchool/src/view/User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/view/User.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DanceSchool/src/view/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/view/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DanceSchool/model/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DanceSchool/model/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DanceSchool/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DanceSchool/model/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DanceSchool/src/view/Teacher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DanceSchool/src/view/Teacher.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +18,20 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="322">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeacherController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/TeacherController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -47,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1496">
@@ -120,7 +121,6 @@
         <option value="$PROJECT_DIR$/DanceSchool/src/view/Controller.java" />
         <option value="$PROJECT_DIR$/DanceSchool/src/view/GUI.java" />
         <option value="$PROJECT_DIR$/DanceSchool/src/view/TeacherController.java" />
-        <option value="$PROJECT_DIR$/DanceSchool/src/view/Teacher.fxml" />
         <option value="$PROJECT_DIR$/DanceSchool/src/model/DateTesting.java" />
         <option value="$PROJECT_DIR$/DanceSchool/src/model/Lesson.java" />
         <option value="$PROJECT_DIR$/DanceSchool/src/model/Plan.java" />
@@ -132,14 +132,14 @@
         <option value="$PROJECT_DIR$/DanceSchool/src/model/GradesModel.java" />
         <option value="$PROJECT_DIR$/DanceSchool/src/view/User.fxml" />
         <option value="$PROJECT_DIR$/DanceSchool/src/view/UserController.java" />
+        <option value="$PROJECT_DIR$/DanceSchool/src/view/Teacher.fxml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="946" />
-    <option name="y" value="66" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="815" />
+    <option name="height" value="868" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -188,7 +188,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaFX test/Event Handling Examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jpo2017/student/grupa4/dobrucki/projekt" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -333,12 +333,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546997820996</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="another update">
+      <created>1547562257375</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547562257375</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -349,11 +355,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32909605" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1409396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1409396" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
@@ -409,7 +415,8 @@
     <MESSAGE value="basic functionalities" />
     <MESSAGE value="GUI skeleton" />
     <MESSAGE value="GUI update" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI update" />
+    <MESSAGE value="another update" />
+    <option name="LAST_COMMIT_MESSAGE" value="another update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -422,25 +429,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/DanceSchool/src/view/HomeController.java</url>
-          <line>93</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/DanceSchool/src/view/HomeController.java</url>
-          <line>94</line>
+          <line>92</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/DanceSchool/src/view/HomeController.java</url>
-          <line>95</line>
+          <line>93</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/DanceSchool/src/view/HomeController.java</url>
-          <line>96</line>
+          <line>94</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
@@ -458,7 +465,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/DanceSchool/src/view/HomeController.java</url>
-          <line>121</line>
+          <line>119</line>
           <properties class="view.HomeController" method="initialize">
             <option name="EMULATED" value="true" />
           </properties>
@@ -652,28 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1683">
-          <caret line="18" lean-forward="true" selection-end-line="158" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/Teacher.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DanceSchool/src/model/DateTesting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/LoadException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -818,31 +803,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DanceSchool/src/model/GradesModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/User.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -856,6 +821,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DanceSchool/src/model/DateTesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1496">
@@ -864,6 +836,41 @@
             <element signature="e#3486#3888#0" expanded="true" />
             <element signature="e#3887#3888#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DanceSchool/src/model/GradesModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/Teacher.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DanceSchool/src/view/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
