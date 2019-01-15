@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 public class UserController implements Initializable {
 
     @FXML
-    private Button home_btn, classes_btn, dolacz_btn, grades_btn, calendar_btn, overview_btn, settings_btn, logout_btn;
+    private Button homeButton, classesButton, enrollButton, gradesButton, calendarButton, overviewButton, settingsButton, setButton, logoutButton;
     @FXML
     private Pane homePane, classesPane, gradesPane, calendarPane, overviewPane, settingsPane;
     @FXML
@@ -35,17 +35,31 @@ public class UserController implements Initializable {
     @FXML
     private TableView<GradesModel> gradesTable;
     @FXML
+    private TableView<Lesson> pricesTable;
+    @FXML
     private TableColumn<GradesModel, String> gradesNames;
     @FXML
     private TableColumn<GradesModel, Integer> gradesNumbers;
     @FXML
+    private TableColumn<Lesson, String> pricesNames;
+    @FXML
+    private TableColumn<Lesson, Integer> pricesNumbers;
+    @FXML
     private TitledPane infoBox;
+    @FXML
+    private Label currentName, currentSurname, fullPrice;
+    @FXML
+    private TextField setName, setSurname;
 
+    private ObservableList<GradesModel> gradesModels = FXCollections.observableArrayList();
+
+    private LoggedUser logged;
     private Plan plan;
     public void setPlan(Plan plan){
         this.plan = plan;
     }
 
+   private ObservableList<Lesson> enrolledLessons = FXCollections.observableArrayList();
 
     public void logoutButtonPressed(ActionEvent event) throws IOException
     {
@@ -60,25 +74,25 @@ public class UserController implements Initializable {
 
     @FXML
     private void buttonHandler(ActionEvent event){
-        if(event.getSource()==home_btn){
+        if(event.getSource()==homeButton){
             homePane.toFront();
-        }else if(event.getSource()==classes_btn){
+        }else if(event.getSource()==classesButton){
             classesPane.toFront();
-        }else if(event.getSource()==grades_btn){
+        }else if(event.getSource()==gradesButton){
             gradesPane.toFront();
-        }else if(event.getSource()==calendar_btn){
+        }else if(event.getSource()==calendarButton){
             calendarPane.toFront();
-        }else if(event.getSource()==overview_btn){
+        }else if(event.getSource()==overviewButton){
             overviewPane.toFront();
-        }else if(event.getSource()==settings_btn){
+        }else if(event.getSource()==settingsButton){
             settingsPane.toFront();
         }
     }
 
-    private ObservableList<GradesModel> gradesModels = FXCollections.observableArrayList(
-            new GradesModel("test", 1),
-            new GradesModel("Keep", 19)
-    );
+    /*private void refresh(){
+        currentName.setText(logged.getStudent().getName());
+        currentSurname.setText(logged.getStudent().getSurname());
+    }*/
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -100,9 +114,9 @@ public class UserController implements Initializable {
         ar2.add(roof);
         ArrayList ar3 = new ArrayList<Student>();
         ar3.add(grzyb);
-        Lesson les1 = new Lesson("salsa","wtorek", 13, ar1, 15);
-        Lesson les2 = new Lesson("tango","sroda", 16, ar2, 10);
-        Lesson les3 = new Lesson("walczyk","czwartek", 17, ar3, 15);
+        Lesson les1 = new Lesson("salsa","wtorek", 13, ar1, 15, 100);
+        Lesson les2 = new Lesson("tango","sroda", 16, ar2, 10, 200);
+        Lesson les3 = new Lesson("walczyk","czwartek", 17, ar3, 15, 140);
         fullplan.addLesson(les1);
         fullplan.addLesson(les2);
         fullplan.addLesson(les3);
@@ -131,14 +145,32 @@ public class UserController implements Initializable {
             infoList.setItems(info);
         });
 
-        dolacz_btn.setOnAction(event -> {
+        enrollButton.setOnAction(event -> {
             logged.getPlan().addLesson(classesList.getSelectionModel().getSelectedItem());
             gradesModels.add(new GradesModel(logged.getPlan().getLessons().get(logged.getPlan().getLessons().size()-1).getName(), logged.getPlan().getLessons().get(logged.getPlan().getLessons().size()-1).getHour()));
+            enrolledLessons.add(new Lesson(logged.getPlan().getLessons().get(logged.getPlan().getLessons().size()-1).getName(), logged.getPlan().getLessons().get(logged.getPlan().getLessons().size()-1).getPrice()));
+            fullPrice.setText(String.valueOf(logged.getPlan().getPrice()));
         });
 
         gradesNames.setCellValueFactory(new PropertyValueFactory<GradesModel, String>("nazwa"));
         gradesNumbers.setCellValueFactory(new PropertyValueFactory<GradesModel, Integer>("ocena"));
         gradesTable.setItems(gradesModels);
+
+        pricesNames.setCellValueFactory(new PropertyValueFactory<Lesson, String>("nameGUI"));
+        pricesNumbers.setCellValueFactory(new PropertyValueFactory<Lesson, Integer>("priceGUI"));
+        pricesTable.setItems(enrolledLessons);
+
+        currentName.setText(logged.getName());
+        currentSurname.setText(logged.getSurname());
+
+        setButton.setOnAction(event -> {
+            logged.setName(setName.getText());
+            logged.setSurname(setSurname.getText());
+            currentName.setText(logged.getName());
+            currentSurname.setText(logged.getSurname());
+        });
+
+        fullPrice.setText(String.valueOf(logged.getPlan().getPrice()));
 
     }
 /*

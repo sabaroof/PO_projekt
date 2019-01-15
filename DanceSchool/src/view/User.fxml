@@ -18,13 +18,13 @@
     <AnchorPane VBox.vgrow="ALWAYS">
         <SplitPane dividerPositions="0.19858156028368795" layoutY="-1.0" prefHeight="437.0" prefWidth="707.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="148.0">
-                <Button fx:id="classes_btn" layoutY="120.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Zajęcia" />
-                <Button fx:id="calendar_btn" layoutX="1.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Harmonogram" />
-                <Button fx:id="home_btn" layoutX="44.0" layoutY="42.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="49.0" prefWidth="52.0" text="Button" />
-                <Button fx:id="overview_btn" layoutX="1.0" layoutY="252.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Podsumowanie" />
-                <Button fx:id="grades_btn" layoutY="164.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="31.0" prefWidth="138.0" text="Dziennik" />
-                <Button fx:id="logout_btn" layoutX="31.0" layoutY="353.0" mnemonicParsing="false" onAction="#logoutButtonPressed" text="Wyloguj" />
-                <Button fx:id="settings_btn" layoutX="1.0" layoutY="294.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Ustawienia" />
+                <Button fx:id="classesButton" layoutY="120.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Zajęcia" />
+                <Button fx:id="calendarButton" layoutX="1.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Harmonogram" />
+                <Button fx:id="homeButton" layoutX="44.0" layoutY="42.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="49.0" prefWidth="52.0" text="Button" />
+                <Button fx:id="overviewButton" layoutX="1.0" layoutY="252.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Podsumowanie" />
+                <Button fx:id="gradesButton" layoutY="164.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="31.0" prefWidth="138.0" text="Dziennik" />
+                <Button fx:id="logoutButton" layoutX="31.0" layoutY="353.0" mnemonicParsing="false" onAction="#logoutButtonPressed" text="Wyloguj" />
+                <Button fx:id="settingsButton" layoutX="1.0" layoutY="294.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="26.0" prefWidth="138.0" text="Ustawienia" />
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                 <Pane fx:id="homePane" prefHeight="398.0" prefWidth="499.0" style="-fx-background-color: #a722cc" />
@@ -39,38 +39,6 @@
                         <TableColumn prefWidth="63.0" text="Piątek" />
                         <TableColumn prefWidth="65.0" text="Sobota" />
                         <TableColumn prefWidth="75.0" text="Niedziela" />
-                    </columns>
-                  </TableView>
-               </children></Pane>
-                <Pane fx:id="overviewPane" prefHeight="435.0" prefWidth="561.0" style="-fx-background-color: #68ed9f">
-               <children>
-                  <PieChart layoutX="233.0" layoutY="67.0" prefHeight="279.0" prefWidth="308.0" />
-                  <Label layoutX="14.0" layoutY="27.0" prefHeight="49.0" prefWidth="163.0" text="Opłaty" />
-                  <TableView layoutX="14.0" layoutY="67.0" prefHeight="279.0" prefWidth="197.0">
-                    <columns>
-                      <TableColumn prefWidth="134.0" text="Zajęcia" />
-                      <TableColumn prefWidth="65.0" text="Cena" />
-                    </columns>
-                  </TableView>
-                  <Separator layoutX="13.0" layoutY="356.0" prefHeight="5.0" prefWidth="531.0" />
-                  <Label layoutX="9.0" layoutY="373.0" prefHeight="49.0" prefWidth="75.0" text="Suma" />
-                  <Label layoutX="142.0" layoutY="387.0" text="Label" />
-               </children></Pane>
-                <Pane fx:id="settingsPane" prefHeight="437.0" prefWidth="561.0" style="-fx-background-color: #9d42c1">
-               <children>
-                  <TextField layoutX="119.0" layoutY="70.0" />
-                  <TextField layoutX="119.0" layoutY="124.0" />
-                  <Label layoutX="16.0" layoutY="75.0" prefHeight="21.0" prefWidth="156.0" text="Imię" />
-                  <Label layoutX="16.0" layoutY="129.0" prefHeight="21.0" prefWidth="156.0" text="Nazwisko" />
-                  <Label layoutX="16.0" layoutY="175.0" prefHeight="21.0" prefWidth="156.0" text="Skill level" />
-                  <Label layoutX="119.0" layoutY="175.0" prefHeight="21.0" prefWidth="156.0" />
-               </children></Pane>
-                <Pane fx:id="gradesPane" prefHeight="437.0" prefWidth="561.0" style="-fx-background-color: #db3052">
-               <children>
-                  <TableView fx:id="gradesTable" layoutX="24.0" layoutY="25.0" prefHeight="398.0" prefWidth="506.0">
-                    <columns>
-                      <TableColumn fx:id="gradesNames" prefWidth="137.0" text="Zajęcia" />
-                      <TableColumn fx:id="gradesNumbers" prefWidth="368.0" text="Oceny" />
                     </columns>
                   </TableView>
                </children></Pane>
@@ -89,7 +57,43 @@
                            </children></AnchorPane>
                     </content>
                   </TitledPane>
-                <Button fx:id="dolacz_btn" layoutX="341.0" layoutY="373.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="213.0" text="Dołącz" />
+                <Button fx:id="enrollButton" layoutX="341.0" layoutY="373.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="213.0" text="Dołącz" />
+               </children></Pane>
+                <Pane fx:id="gradesPane" prefHeight="437.0" prefWidth="561.0" style="-fx-background-color: #db3052">
+               <children>
+                  <TableView fx:id="gradesTable" layoutX="24.0" layoutY="25.0" prefHeight="398.0" prefWidth="506.0">
+                    <columns>
+                      <TableColumn fx:id="gradesNames" prefWidth="137.0" text="Zajęcia" />
+                      <TableColumn fx:id="gradesNumbers" prefWidth="368.0" text="Oceny" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+                <Pane fx:id="settingsPane" prefHeight="437.0" prefWidth="561.0" style="-fx-background-color: #9d42c1">
+               <children>
+                  <TextField fx:id="setName" layoutX="132.0" layoutY="230.0" />
+                  <TextField fx:id="setSurname" layoutX="132.0" layoutY="266.0" />
+                  <Label layoutX="21.0" layoutY="235.0" prefHeight="21.0" prefWidth="156.0" text="Imię" />
+                  <Label layoutX="21.0" layoutY="271.0" prefHeight="21.0" prefWidth="156.0" text="Nazwisko" />
+                  <Label layoutX="21.0" layoutY="26.0" prefHeight="21.0" prefWidth="156.0" text="Obecne dane:" />
+                  <Label layoutX="21.0" layoutY="47.0" prefHeight="21.0" prefWidth="156.0" text="Imię:" />
+                  <Label layoutX="21.0" layoutY="68.0" prefHeight="21.0" prefWidth="156.0" text="Nazwisko:" />
+                  <Label fx:id="currentName" layoutX="132.0" layoutY="47.0" prefHeight="21.0" prefWidth="156.0" />
+                  <Label fx:id="currentSurname" layoutX="132.0" layoutY="68.0" prefHeight="21.0" prefWidth="156.0" />
+                  <Button fx:id="setButton" layoutX="132.0" layoutY="325.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="186.0" text="Ustaw" />
+               </children></Pane>
+                <Pane fx:id="overviewPane" prefHeight="435.0" prefWidth="561.0" style="-fx-background-color: #68ed9f">
+               <children>
+                  <PieChart layoutX="233.0" layoutY="67.0" prefHeight="279.0" prefWidth="308.0" />
+                  <Label layoutX="14.0" layoutY="27.0" prefHeight="49.0" prefWidth="163.0" text="Opłaty" />
+                  <TableView fx:id="pricesTable" layoutX="14.0" layoutY="67.0" prefHeight="279.0" prefWidth="197.0">
+                    <columns>
+                      <TableColumn fx:id="pricesNames" prefWidth="134.0" text="Zajęcia" />
+                      <TableColumn fx:id="pricesNumbers" prefWidth="65.0" text="Cena" />
+                    </columns>
+                  </TableView>
+                  <Separator layoutX="13.0" layoutY="356.0" prefHeight="5.0" prefWidth="531.0" />
+                  <Label layoutX="9.0" layoutY="373.0" prefHeight="49.0" prefWidth="75.0" text="Suma:" />
+                  <Label fx:id="fullPrice" layoutX="78.0" layoutY="387.0" text="Label" />
                </children></Pane>
             </AnchorPane>
         </SplitPane>
